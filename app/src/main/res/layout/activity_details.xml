@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shabayekdes.popcine.DetailsActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/poster_iv"
+            android:layout_width="@dimen/width_zero"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:scaleType="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/poster" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/favorites_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_side"
+            android:layout_marginEnd="@dimen/margin_side"
+            android:onClick="favorite"
+            app:backgroundTint="@android:color/holo_orange_light"
+            app:layout_constraintBottom_toBottomOf="@+id/poster_iv"
+            app:layout_constraintEnd_toEndOf="@+id/poster_iv"
+            app:layout_constraintTop_toBottomOf="@+id/poster_iv"
+            app:srcCompat="@drawable/ic_favorite_heart"
+            android:layout_marginRight="8dp" />
+
+        <include
+            android:id="@+id/basic_details_info"
+            layout="@layout/basic_details_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/poster_iv"
+            app:layout_constraintStart_toStartOf="@+id/poster_iv"
+            app:layout_constraintTop_toBottomOf="@id/favorites_button" />
+
+        <include
+            android:id="@+id/trailers_layout"
+            layout="@layout/trailers_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/basic_details_info"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/basic_details_info"
+            app:layout_constraintTop_toBottomOf="@+id/basic_details_info" />
+
+        <include
+            android:id="@+id/reviews_layout"
+            layout="@layout/reviews_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_side"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/trailers_layout"
+            app:layout_constraintStart_toStartOf="@+id/trailers_layout"
+            app:layout_constraintTop_toBottomOf="@id/trailers_layout" />
+
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

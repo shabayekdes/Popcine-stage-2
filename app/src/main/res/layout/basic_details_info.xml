@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vertical_guide_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <TextView
+        android:id="@+id/overview_label"
+        android:layout_width="@dimen/width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_side"
+        android:layout_marginStart="@dimen/margin_side"
+        android:text="@string/overview"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guide_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/overview_tv" />
+
+    <TextView
+        android:id="@+id/overview_tv"
+        android:layout_width="@dimen/width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_side"
+        android:layout_marginStart="@dimen/margin_side"
+        android:layout_marginTop="@dimen/margin_side"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guide_line"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/overview" />
+
+    <TextView
+        android:id="@+id/release_date_label"
+        android:layout_width="@dimen/width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_side"
+        android:text="@string/release_date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/overview_label"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/overview_label"
+        app:layout_constraintTop_toBottomOf="@+id/overview_tv" />
+
+    <TextView
+        android:id="@+id/release_date_tv"
+        android:layout_width="@dimen/width_zero"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/overview_tv"
+        app:layout_constraintStart_toStartOf="@+id/overview_tv"
+        app:layout_constraintTop_toTopOf="@+id/release_date_label"
+        tools:text="@string/release_date" />
+
+    <TextView
+        android:id="@+id/vote_average_label"
+        android:layout_width="@dimen/width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_side"
+        android:text="@string/vote_average"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/release_date_label"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/release_date_label"
+        app:layout_constraintTop_toBottomOf="@+id/release_date_tv" />
+
+    <TextView
+        android:id="@+id/vote_average_tv"
+        android:layout_width="@dimen/width_zero"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/release_date_tv"
+        app:layout_constraintStart_toStartOf="@+id/release_date_tv"
+        app:layout_constraintTop_toTopOf="@+id/vote_average_label"
+        tools:text="@string/vote_average" />
+
+</android.support.constraint.ConstraintLayout>

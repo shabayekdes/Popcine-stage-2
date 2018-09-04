@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/movie_list_item_height"
+    android:background="@color/colorPrimary"
+    app:cardElevation="1dp"
+    app:cardMaxElevation="@dimen/width_zero"
+    app:cardPreventCornerOverlap="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/horizontal_guide_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8" />
+
+        <ImageView
+            android:id="@+id/poster_iv"
+            android:layout_width="@dimen/width_zero"
+            android:layout_height="@dimen/width_zero"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_guide_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/poster" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="@dimen/width_zero"
+            android:layout_height="@dimen/width_zero"
+            android:background="@android:color/holo_orange_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/poster_iv"
+            app:layout_constraintStart_toStartOf="@id/poster_iv"
+            app:layout_constraintTop_toTopOf="@id/horizontal_guide_line">
+
+
+            <TextView
+                android:id="@+id/item_title_tv"
+                android:layout_width="@dimen/width_zero"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/title" />
+
+
+            <TextView
+                android:id="@+id/item_genre_tv"
+                android:layout_width="@dimen/width_zero"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="@+id/item_title_tv"
+                app:layout_constraintStart_toStartOf="@+id/item_title_tv"
+                app:layout_constraintTop_toBottomOf="@+id/item_title_tv"
+                tools:text="@string/genres" />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
